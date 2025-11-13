@@ -363,31 +363,31 @@ services:
       - NV_INGEST_MAX_UTIL=${NV_INGEST_MAX_UTIL:-48}
       - OTEL_EXPORTER_OTLP_ENDPOINT=otel-collector:4317
       # Self-hosted paddle endpoints.
-      - OCR_GRPC_ENDPOINT=${OCR_GRPC_ENDPOINT:-${PADDLE_GRPC_ENDPOINT:-paddle:8001}}
-      - OCR_HTTP_ENDPOINT=${OCR_HTTP_ENDPOINT:-${PADDLE_HTTP_ENDPOINT:-http://paddle:8000/v1/infer}}
-      - OCR_INFER_PROTOCOL=${OCR_INFER_PROTOCOL:-${PADDLE_INFER_PROTOCOL:-grpc}}
-      - OCR_MODEL_NAME=${OCR_MODEL_NAME:-paddle}
+      #- OCR_GRPC_ENDPOINT=${OCR_GRPC_ENDPOINT:-${PADDLE_GRPC_ENDPOINT:-paddle:8001}}
+      #- OCR_HTTP_ENDPOINT=${OCR_HTTP_ENDPOINT:-${PADDLE_HTTP_ENDPOINT:-http://paddle:8000/v1/infer}}
+      #- OCR_INFER_PROTOCOL=${OCR_INFER_PROTOCOL:-${PADDLE_INFER_PROTOCOL:-grpc}}
+      #- OCR_MODEL_NAME=${OCR_MODEL_NAME:-paddle}
       # build.nvidia.com hosted paddle endpoints.
-      #- OCR_HTTP_ENDPOINT=https://ai.api.nvidia.com/v1/cv/baidu/paddleocr
-      #- OCR_INFER_PROTOCOL=http
+      - OCR_HTTP_ENDPOINT=https://ai.api.nvidia.com/v1/cv/baidu/paddleocr
+      - OCR_INFER_PROTOCOL=http
       - READY_CHECK_ALL_COMPONENTS=False
       - REDIS_MORPHEUS_TASK_QUEUE=morpheus_task_queue
       # Self-hosted redis endpoints.
       # build.nvidia.com hosted yolox endpoints.
-      #- YOLOX_HTTP_ENDPOINT=https://ai.api.nvidia.com/v1/cv/nvidia/nemoretriever-page-elements-v2
-      #- YOLOX_INFER_PROTOCOL=http
+      - YOLOX_HTTP_ENDPOINT=https://ai.api.nvidia.com/v1/cv/nvidia/nemoretriever-page-elements-v2
+      - YOLOX_INFER_PROTOCOL=http
       - YOLOX_GRPC_ENDPOINT=${YOLOX_GRPC_ENDPOINT:-page-elements:8001}
       - YOLOX_HTTP_ENDPOINT=${YOLOX_HTTP_ENDPOINT:-http://page-elements:8000/v1/infer}
       - YOLOX_INFER_PROTOCOL=${YOLOX_INFER_PROTOCOL:-grpc}
       # build.nvidia.com hosted yolox-graphics-elements endpoints.
-      #- YOLOX_GRAPHIC_ELEMENTS_HTTP_ENDPOINT=https://ai.api.nvidia.com/v1/cv/nvidia/nemoretriever-graphic-elements-v1
-      #- YOLOX_GRAPHIC_ELEMENTS_INFER_PROTOCOL=http
+      - YOLOX_GRAPHIC_ELEMENTS_HTTP_ENDPOINT=https://ai.api.nvidia.com/v1/cv/nvidia/nemoretriever-graphic-elements-v1
+      - YOLOX_GRAPHIC_ELEMENTS_INFER_PROTOCOL=http
       - YOLOX_GRAPHIC_ELEMENTS_GRPC_ENDPOINT=${YOLOX_GRAPHIC_ELEMENTS_GRPC_ENDPOINT:-graphic-elements:8001}
       - YOLOX_GRAPHIC_ELEMENTS_HTTP_ENDPOINT=${YOLOX_GRAPHIC_ELEMENTS_HTTP_ENDPOINT:-http://graphic-elements:8000/v1/infer}
       - YOLOX_GRAPHIC_ELEMENTS_INFER_PROTOCOL=${YOLOX_GRAPHIC_ELEMENTS_INFER_PROTOCOL:-grpc}
       # build.nvidia.com hosted  yolox-table-elements endpoints.
-      #- YOLOX_TABLE_STRUCTURE_HTTP_ENDPOINT=https://ai.api.nvidia.com/v1/cv/nvidia/nemoretriever-table-structure-v1
-      #- YOLOX_TABLE_STRUCTURE_INFER_PROTOCOL=http
+      - YOLOX_TABLE_STRUCTURE_HTTP_ENDPOINT=https://ai.api.nvidia.com/v1/cv/nvidia/nemoretriever-table-structure-v1
+      - YOLOX_TABLE_STRUCTURE_INFER_PROTOCOL=http
       - YOLOX_TABLE_STRUCTURE_GRPC_ENDPOINT=${YOLOX_TABLE_STRUCTURE_GRPC_ENDPOINT:-table-structure:8001}
       - YOLOX_TABLE_STRUCTURE_HTTP_ENDPOINT=${YOLOX_TABLE_STRUCTURE_HTTP_ENDPOINT:-http://table-structure:8000/v1/infer}
       - YOLOX_TABLE_STRUCTURE_INFER_PROTOCOL=${YOLOX_TABLE_STRUCTURE_INFER_PROTOCOL:-grpc}
