@@ -357,9 +357,9 @@ services:
       - NEMORETRIEVER_PARSE_HTTP_ENDPOINT=${NEMORETRIEVER_PARSE_HTTP_ENDPOINT:-http://nemoretriever-parse:8000/v1/chat/completions}
       - NEMORETRIEVER_PARSE_INFER_PROTOCOL=${NEMORETRIEVER_PARSE_INFER_PROTOCOL:-http}
       - NEMORETRIEVER_PARSE_MODEL_NAME=${NEMORETRIEVER_PARSE_MODEL_NAME:-nvidia/nemoretriever-parse}
-      - NVIDIA_API_KEY=${NVIDIA_API_KEY:-nvidiaapikey}
+      #- NVIDIA_API_KEY=${NVIDIA_API_KEY:-nvidiaapikey}
       - NGC_API_KEY=${NGC_API_KEY:-nvidiaapikey}
-      - NVIDIA_BUILD_API_KEY=${NGC_API_KEY:-nvidiaapikey}
+      #- NVIDIA_BUILD_API_KEY=${NGC_API_KEY:-nvidiaapikey}
       - NV_INGEST_MAX_UTIL=${NV_INGEST_MAX_UTIL:-48}
       - OTEL_EXPORTER_OTLP_ENDPOINT=otel-collector:4317
       # Self-hosted paddle endpoints.
