@@ -363,10 +363,10 @@ services:
       - NV_INGEST_MAX_UTIL=${NV_INGEST_MAX_UTIL:-48}
       - OTEL_EXPORTER_OTLP_ENDPOINT=otel-collector:4317
       # Self-hosted paddle endpoints.
-      #- OCR_GRPC_ENDPOINT=${OCR_GRPC_ENDPOINT:-${PADDLE_GRPC_ENDPOINT:-paddle:8001}}
-      #- OCR_HTTP_ENDPOINT=${OCR_HTTP_ENDPOINT:-${PADDLE_HTTP_ENDPOINT:-http://paddle:8000/v1/infer}}
-      #- OCR_INFER_PROTOCOL=${OCR_INFER_PROTOCOL:-${PADDLE_INFER_PROTOCOL:-grpc}}
-      #- OCR_MODEL_NAME=${OCR_MODEL_NAME:-paddle}
+      - OCR_GRPC_ENDPOINT=${OCR_GRPC_ENDPOINT:-${PADDLE_GRPC_ENDPOINT:-paddle:8001}}
+      - OCR_HTTP_ENDPOINT=${OCR_HTTP_ENDPOINT:-${PADDLE_HTTP_ENDPOINT:-http://paddle:8000/v1/infer}}
+      - OCR_INFER_PROTOCOL=${OCR_INFER_PROTOCOL:-${PADDLE_INFER_PROTOCOL:-grpc}}
+      - OCR_MODEL_NAME=${OCR_MODEL_NAME:-paddle}
       # build.nvidia.com hosted paddle endpoints.
       - OCR_HTTP_ENDPOINT=https://ai.api.nvidia.com/v1/cv/baidu/paddleocr
       - OCR_INFER_PROTOCOL=http
